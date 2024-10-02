@@ -11,7 +11,7 @@ import (
 
 func main() {
 	//el parametro tiene que cambiar segun la pagina que quieras visitar
-	blogTitle, err := GetLatestBlogTitles("https://gacel.cl/sandalias/?srsltid=AfmBOophxxi9XFYVEmwOAI-X2pKPEya4zi4tb-5sBDXmjvtcr5Q4vUMH")
+	blogTitle, err := Getanything("https://gacel.cl/sandalias/?srsltid=AfmBOophxxi9XFYVEmwOAI-X2pKPEya4zi4tb-5sBDXmjvtcr5Q4vUMH")
 	if err != nil {
 		log.Println("Error fetching blog titles:", err)
 		return
@@ -21,7 +21,7 @@ func main() {
 	fmt.Println(blogTitle)
 }
 
-func GetLatestBlogTitles(url string) (string, error) {
+func Getanything(url string) (string, error) {
 	resp, err := http.Get(url)
 	if err != nil {
 		return "", err
