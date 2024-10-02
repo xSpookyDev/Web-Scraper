@@ -17,7 +17,7 @@ func main() {
 		return
 	}
 
-	fmt.Println("Blog titles:")
+	fmt.Println("Prices:")
 	fmt.Println(blogTitle)
 }
 
